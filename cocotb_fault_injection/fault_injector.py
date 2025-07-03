@@ -15,7 +15,7 @@ class FaultInjector:
                  injection_strategy=None, injection_goal=None,
                  count_handle=None, name_handle=None, leaf_module_info=None,
                  name=None, log_level=logging.INFO, log_file=None,
-                 max_signal_len=128, injection_goal_check=128):
+                 max_signal_len=128, injection_goal_check=1):
         self._name = name or "default"
         self._log = SimLog(f"{self.__class__.__name__}.{self._name}")
         self._log.setLevel(log_level)
