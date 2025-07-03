@@ -1,0 +1,22 @@
+
+VLOGAN	= vlogan
+VLOGAN_OPT	= -l vlogan.log -full64 -sverilog +define+COCOTB_SIM=1 -full64
+
+all :		_VCSgd_RcnYxc_1.db \
+	_VCSgd_cS4DGd_1.db \
+	_VCSgd_oeNpnc_1.db \
+
+
+
+_VCSgd_RcnYxc_1.db :	mktest.v 
+		${VLOGAN}  ${VLOGAN_OPT} mktest.v
+
+
+_VCSgd_cS4DGd_1.db :	Counter.v 
+		${VLOGAN}  ${VLOGAN_OPT} Counter.v
+
+
+_VCSgd_oeNpnc_1.db :	SizedFIFO.v 
+		${VLOGAN}  ${VLOGAN_OPT} SizedFIFO.v
+
+

@@ -1,0 +1,68 @@
+Command: vcs -full64 -debug_access+all +vpi -load /scratch/MG-DLI/project/fault_simulation/fault-injection-verif/uart_example/cocotb_env/lib/python3.10/site-packages/cocotb/libs/libcocotbvpi_vcs.so \
+mktest -o simv -l vcs.log
+Doing common elaboration 
+                         Chronologic VCS (TM)
+      Version W-2024.09-SP1-1_Full64 -- Thu Jul  3 15:54:02 2025
+
+                    Copyright (c) 1991 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+
+Warning-[VPI-CT-NS] VPI function is not supported
+  The VPI function 'vpi_register_cb' is not supported in the compiler.
+  Please fix the code being referred to by the '-load' compile option.
+
+
+Warning-[VPI-CT-NS] VPI function is not supported
+  The VPI function 'vpi_chk_error' is not supported in the compiler.
+  Please fix the code being referred to by the '-load' compile option.
+
+
+Warning-[VPI-CT-NS] VPI function is not supported
+  The VPI function 'vpi_register_cb' is not supported in the compiler.
+  Please fix the code being referred to by the '-load' compile option.
+
+
+Warning-[VPI-CT-NS] VPI function is not supported
+  The VPI function 'vpi_chk_error' is not supported in the compiler.
+  Please fix the code being referred to by the '-load' compile option.
+
+Top Level Modules:
+       mktest
+TimeScale is 1 ns / 1 ps
+Starting vcs inline pass...
+2 modules and 0 UDP read.
+recompiling module mktest
+recompiling module SizedFIFO
+Both modules done.
+make[1]: Entering directory '/scratch/MG-DLI/project/fault_simulation/fault-injection-verif/uart_example/csrc' \
+
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv   -no-pie  -Wl,--no-as-needed    -L/usr/lib/x86_64-linux-gnu -L/lib/x86_64-linux-gnu \
+-Wl,--no-as-needed -rdynamic -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/scratch/MG-DLI/tools/vcs/vcs/W-2024.09-SP1-1/linux64/lib -L/scratch/MG-DLI/tools/vcs/vcs/W-2024.09-SP1-1/linux64/lib \
+-Wl,-rpath-link=./ -Wl,--no-as-needed   objs/amcQw_d.o  _153294_archive_1.so  SIM_l.o \
+rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o        \
+-lnuma -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -lvirsim -luclinative \
+/scratch/MG-DLI/tools/vcs/vcs/W-2024.09-SP1-1/linux64/lib/vcs_tls.o   -Wl,-whole-archive \
+-lvcsucli    -Wl,-no-whole-archive       _vcs_pli_stub_.o   /scratch/MG-DLI/tools/vcs/vcs/W-2024.09-SP1-1/linux64/lib/vcs_save_restore_new.o \
+/scratch/MG-DLI/tools/verdi/verdi/W-2024.09-SP2-2//share/PLI/VCS/LINUX64/pli.a -ldl \
+-lc -lm -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory '/scratch/MG-DLI/project/fault_simulation/fault-injection-verif/uart_example/csrc' \
+
+CPU time: .315 seconds to compile + .167 seconds to elab + .165 seconds to link
